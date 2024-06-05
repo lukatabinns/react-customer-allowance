@@ -1,26 +1,28 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter, Routes, Route} from 'react-router-dom';
+import {GlobalStyles, Box } from '@bigcommerce/big-design';
+import { theme } from '@bigcommerce/big-design-theme';
+import { ThemeProvider } from 'styled-components';
+import List from './pages/List';
+import AddEditCustomer from "./pages/AddEditCustomer";
+import './App.scss';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <BrowserRouter>
+        <Box backgroundColor="secondary20" padding="xxLarge">
+
+        <ThemeProvider theme={theme}>
+            <GlobalStyles />
+            <Routes>
+                <Route path="/" element={ <List/> } />
+                <Route path="/allowance/:allowanceId" element={ <AddEditCustomer/> } />
+                <Route path="/allowance/add" element={ <AddEditCustomer/> } />
+            </Routes>
+        </ThemeProvider>
+        </Box>
+    </BrowserRouter>
+);
 }
 
 export default App;

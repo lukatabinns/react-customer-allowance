@@ -1,0 +1,94 @@
+body{
+   background-color: #ECEEF5 !important;
+}
+
+.Heading1 {
+    font-weight: 300 !important;
+    font-family: "Source Sans Pro",Arial,"Helvetica Neue",sans-serif !important;
+}
+
+.bg-danger{
+    background-color: #ff0000 !important;
+}
+
+.bg-danger-brd{
+    border-color: #ff0000 !important;
+}
+
+.bg-danger:focus {
+    outline: #ff0000 !important;
+}
+
+.clear-bth{
+    clear: both;
+}
+
+.crs{
+    cursor: pointer;
+}
+
+.arrow-txt{
+    font-weight: 600;
+    margin-left: 0.32rem;
+    padding-top:2px;
+}
+
+.arrow-link{
+    color: #8e919c;
+    font-size: 1.2rem;
+}
+
+.arrow-link-width{
+    width:6.4%;
+    display: inline-flex;
+}
+
+.arrow-icon-sz{
+    height: 1.2rem;
+    width: 1.2rem;
+}
+
+.active-allowance{
+    background-color: #dedede !important;
+}
+
+.svg-mid{
+    height: 40%;
+    width: 100%;
+    display: flex;
+    position: fixed;
+}
+
+//styling for add allowance
+
+.search-usr{
+    border-right: 1px solid #d0d0d0;
+    border-left: 1px solid #d0d0d0;
+    border-bottom: 1px solid #d0d0d0;
+    padding: 10px 10px 10px 10px;
+}
+
+.search-usr:hover{
+    background-color: #e7e7e7;
+}
+
+.search-usr-wrapper{
+    margin-top: -16px;
+    max-width: 26rem;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+}
+
+.btn-add-rule{
+    padding-left: 7.8%;
+}
+
+.box-top{
+    padding-top: 0 !important;
+    padding-left: 10px !important;
+}
+
+.read-only input[type="text"] {
+    background-color : #ebebeb;
+}
+
+//end of add allowance
