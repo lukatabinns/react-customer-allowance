@@ -1,16 +1,23 @@
-import React, { Component } from 'react';
-import {Spinner} from '../util/Spinner';
-import {ApiService} from '../services/ApiService';
+import React, { Component } from 'react'
+import {Spinner} from '../util/Spinner'
+import {ApiService} from '../services/ApiService'
+import {Props} from '../types/home'
 
-export default class Home extends Component<any, any> {
-    constructor(props: any) {
+export default class Home extends Component<Props, State> {
+    constructor(props: Props) {
         super(props);
 
         this.state = {
             isCatalogSummaryLoading: true,
             isStoreInfoLoading: true,
-            catalogSummary: {},
-            storeInfo: {},
+            catalogSummary: [],
+            storeInfo: {
+                currency: '',
+                domain: '',
+                secure_url: '',
+                name: '',
+                logo: {} as Logo
+            },
         };
     }
 
